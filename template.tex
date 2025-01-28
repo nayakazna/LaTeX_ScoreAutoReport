@@ -1,6 +1,9 @@
 \documentclass{letter}
 \usepackage[a5paper,landscape,margin=1.5cm]{geometry}
 \usepackage{ebgaramond-maths} % Garamond font because i like it
+\usepackage{tabularray} % For table
+
+\input{info.tex}
 
 % Configuration
 %% Edit these
@@ -9,9 +12,7 @@
 \newcommand{\studyprogram}{Program Studi Teknik Informatika} % Change with study program's name
 \newcommand{\uniaddress}{Jalan Ganesha no. 10, Bandung, Jawa Barat, Indonesia 40132} % Change with university's address
 \newcommand{\course}{IF2123 Aljabar Linear dan Geometri} % Change with course's name
-\newcommand{\lecturer}{Nama Dosen} % Change with lecturer's name
-\newcommand{\studentname}{Nama} % Change with student's name
-\newcommand{\studentid}{NIM} % Change with student's ID
+\newcommand{\lecturername}{Nama Dosen} % Change with lecturer's name
 \newcommand{\lettertitle}{
     \centering
     \textbf{\course}\\ 
@@ -49,32 +50,18 @@
 \or Desember\fi\ $\number\year$}%
 \date{\today\hspace{0.025\linewidth}\vspace{-2.5em}}
 
-%% For table
-\usepackage{tabularray}
-
 
 \begin{document}
 
 \begin{letter}{\lettertitle}
-    % Header
     \createheader
 
-    % Content
-    %% Opening
-    \opening{Halo Nama,}
+    \opening{Halo \studentname \ (\studentid),}
     Berikut adalah rincian nilai kamu untuk mata kuliah ini.
 
-    %% Table
-    \begin{center}
-        \begin{tblr}{hlines,vlines}
-            \textbf{Kategori} &  \\
-            \textbf{Bobot} &  \\
-            \textbf{Nilai} & \\
-        \end{tblr}
-    \end{center}
+    \scoretable
 
-    % Closing
-    \signature{\lecturer}
+    \signature{\lecturername}
     \closing{Salam,}
 
 \end{letter}
