@@ -1,0 +1,81 @@
+\documentclass{letter}
+\usepackage[a5paper,landscape,margin=1.5cm]{geometry}
+\usepackage{ebgaramond-maths} % Garamond font because i like it
+
+% Configuration
+%% Edit these
+\newcommand{\university}{Institut Teknologi Bandung} % Change with university's name
+\newcommand{\faculty}{Sekolah Teknik Elektro dan Informatika} % Change with faculty's name
+\newcommand{\studyprogram}{Program Studi Teknik Informatika} % Change with study program's name
+\newcommand{\uniaddress}{Jalan Ganesha no. 10, Bandung, Jawa Barat, Indonesia 40132} % Change with university's address
+\newcommand{\course}{IF2123 Aljabar Linear dan Geometri} % Change with course's name
+\newcommand{\lecturer}{Nama Dosen} % Change with lecturer's name
+\newcommand{\studentname}{Nama} % Change with student's name
+\newcommand{\studentid}{NIM} % Change with student's ID
+\newcommand{\lettertitle}{
+    \centering
+    \textbf{\course}\\ 
+    \textbf{Rincian Nilai} % Change with letter's title
+    } 
+
+% Formatting
+%% Header
+\newcommand{\createheader}{
+    {\centering
+        {
+            \large
+            \textsc{\university}\\
+            \textsc{\faculty}\\
+            \textsc{\studyprogram}\\[.25em]
+        } 
+        \uniaddress\\
+    }
+    {\centering\noindent\rule{0.95\linewidth}{0.4pt}\par}
+}
+
+%% For Indonesian date format (dd/mm/yyyy, do not use the WORST date format mm/dd/yyyy LMAO)
+\renewcommand\today{$\number\day$\ %
+\ifcase\month \or Januari%
+\or Februari%
+\or Maret%
+\or April%
+\or Mei%
+\or Juni%
+\or Juli%
+\or Agustus%
+\or September%
+\or Oktober%
+\or November%
+\or Desember\fi\ $\number\year$}%
+\date{\today\hspace{0.025\linewidth}\vspace{-2.5em}}
+
+%% For table
+\usepackage{tabularray}
+
+
+\begin{document}
+
+\begin{letter}{\lettertitle}
+    % Header
+    \createheader
+
+    % Content
+    %% Opening
+    \opening{Halo Nama,}
+    Berikut adalah rincian nilai kamu untuk mata kuliah ini.
+
+    %% Table
+    \begin{center}
+        \begin{tblr}{hlines,vlines}
+            \textbf{Kategori} &  \\
+            \textbf{Bobot} &  \\
+            \textbf{Nilai} & \\
+        \end{tblr}
+    \end{center}
+
+    % Closing
+    \signature{\lecturer}
+    \closing{Salam,}
+
+\end{letter}
+\end{document}
