@@ -55,3 +55,8 @@ The header for the table can be modified in line 12-14 of [`latexutils.py`](modu
 13 bobot = 'Bobot' # Weight, in Indonesian
 14 nilai = 'Nilai' # Score, in Indonesian
 ```
+
+# Images
+An example of the generated PDF files.
+![image](https://github.com/user-attachments/assets/2617dc37-3863-4387-95b3-860ad36a6bf9)
+![image](https://github.com/user-attachments/assets/a8d7b02f-6bcc-4ec5-a2df-ed5e24c0bf68)
